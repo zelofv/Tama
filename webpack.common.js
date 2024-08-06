@@ -25,13 +25,13 @@ module.exports = {
             banner: () => {
                 // 渲染文件头，目前只支持这些变量，有点丑，先凑活着用...
                 let userscriptHeaders = fs.readFileSync("./userscript-headers.js").toString("utf-8");
-                userscriptHeaders = userscriptHeaders.replaceAll("${name}", webpackPackageJson["name"] || "");
-                userscriptHeaders = userscriptHeaders.replaceAll("${namespace}", webpackPackageJson["namespace"] || "");
-                userscriptHeaders = userscriptHeaders.replaceAll("${version}", webpackPackageJson["version"] || "");
-                userscriptHeaders = userscriptHeaders.replaceAll("${description}", webpackPackageJson["description"] || "");
-                userscriptHeaders = userscriptHeaders.replaceAll("${document}", webpackPackageJson["document"] || "");
-                userscriptHeaders = userscriptHeaders.replaceAll("${author}", webpackPackageJson["author"] || "");
-                userscriptHeaders = userscriptHeaders.replaceAll("${repository}", webpackPackageJson["repository"] || "");
+                userscriptHeaders = userscriptHeaders.replace("${name}", webpackPackageJson["name"] || "");
+                userscriptHeaders = userscriptHeaders.replace("${namespace}", webpackPackageJson["namespace"] || "");
+                userscriptHeaders = userscriptHeaders.replace("${version}", webpackPackageJson["version"] || "");
+                userscriptHeaders = userscriptHeaders.replace("${description}", webpackPackageJson["description"] || "");
+                userscriptHeaders = userscriptHeaders.replace("${document}", webpackPackageJson["document"] || "");
+                userscriptHeaders = userscriptHeaders.replace("${author}", webpackPackageJson["author"] || "");
+                userscriptHeaders = userscriptHeaders.replace("${repository}", webpackPackageJson["repository"] || "");
                 return userscriptHeaders;
             }
         }),

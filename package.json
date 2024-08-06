@@ -1,20 +1,23 @@
 {
-  "name": "userscript-foo",
-  "version": "0.0.1",
-  "description": "this is userscript's description",
+  "name": "tama",
+  "version": "0.1.1",
+  "description": "【Tama】 自动高亮后续词条",
   "main": "index.js",
-  "repository": "https://github.com/JSREI/userscript-template.git",
-  "namespace": "https://github.com/JSREI/userscript-template.git",
-  "document": "https://github.com/JSREI/userscript-template.git",
+  "repository": "https://github.com/zelofv/Tama.git",
+  "namespace": "https://github.com/zelofv/Tama.git",
+  "document": "https://github.com/zelofv/Tama.git",
   "scripts": {
     "build": "webpack --config webpack.prod.js",
     "watch": "webpack --watch --config webpack.dev.js"
   },
-  "author": "CC11001100 <CC11001100@qq.com>",
+  "author": "zelo",
   "license": "MIT",
   "devDependencies": {
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
     "webpack-merge": "^5.9.0"
+  },
+  "dependencies": {
+    "xlsx-js-style": "^1.2.0"
   }
 }
